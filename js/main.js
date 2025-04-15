@@ -8,15 +8,28 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // menu open close
-    let menu = document.querySelector('.menu-icon');
-    let navbar = document.querySelector('.navbar');
+    let menu = document.querySelector(".menu-icon");
+    let navbar = document.querySelector(".navbar");
 
     menu.onclick = () => {
-        navbar.classList.toggle("move");
+        menu.classList.toggle("move");
+        navbar.classList.toggle("open-menu");
+    };
+    // on scroll remove
+    window.onscroll = () => {
+        menu.classList.remove("move");
+        navbar.classList.remove("open-menu");
+        dropLogin.classList.remove("drop-login-open");
     }
+    // header background change
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('shadow', window.scrollY > 0);
+    })
 
     // home swiper
-    var swiper = new Swiper(".home", {
+    const homeSwiper = new Swiper(".home", {
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {
@@ -52,13 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
             accordionContent.removeAttribute('style');
             item.classList.remove('accordion-open')
         } else {
-            accordionContent.style.height = accordionContent.scrollHeight + 'px';
-            item.classList.add('accordion-open');
+            accordionContent.style.height = accordionContent.scrollHeight + 'px';            item.classList.add('accordion-open');
         }
     };
 
     // control swiper
-    var swiper = new Swiper(".control-images", {
+    const controlSwiper = new Swiper(".control-images", {
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {

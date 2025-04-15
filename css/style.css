@@ -66,6 +66,10 @@ header {
     background: rgba(29, 35, 82, 90%);
     z-index: 200;
 }
+.header .shadow {
+    background: var(--container-color);
+    transition: 0.4s all linear;
+}
 
 .nav {
     max-width: 1200px;
@@ -188,7 +192,7 @@ header {
     justify-content: center;
     row-gap: 5px;
     cursor: pointer;
-    z-index: 200;
+    z-index: 100;
     transition: 0.3s;
 }
 
@@ -240,7 +244,7 @@ header {
     background: linear-gradient(74deg,
             rgb(23, 27, 68, 80%)50%,
             rgb(23, 27, 68, 14%));
-    z-index: 200;
+    z-index: 100;
 }
 
 .swiper-pagination {
@@ -254,7 +258,7 @@ header {
 }
 
 .home-text {
-    z-index: 200;
+    z-index: 100;
 }
 
 .slide-title {
@@ -331,7 +335,7 @@ header {
     transform: scale(1.05);
     transition: 0.4s all ease-in-out;
 }
-.ser-box .box {
+.ser-box .bx {
     font-size: 1.7rem;
     padding: 10px;
     background: var(--main-color);
@@ -480,4 +484,382 @@ header {
 }
 .accordion-open .accordion-title {
     font-weight: 600;
+}
+/* control */
+.control {
+    background: var(--container-color);
+}
+.control-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    background: var(--container-color);
+}
+.control-text {
+    flex: 1 1 17rem;
+}
+.control-title {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.control-text p {
+    font-size: 0.93rem;
+    margin: 0.5rem 0 0.8rem;
+}
+.control-text .bx {
+    color: var(--main-color);
+}
+.spec-box {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.spec-box span {
+    font-size: 0.938rem;
+}
+.control-images {
+    flex: 1 1 17rem;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 24px !important;
+    font-weight: 600;
+    color: var(--text-color);
+}
+/* footer */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    margin-top: 4rem !important;
+    padding-bottom: 20px;
+}
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+.footer-title {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+.footer-box a {
+    color: #d4d4d4;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+}
+.footer-box a:hover {
+    color: var(--hover-color);
+    transition: 0.3s all linear;
+}
+.footer-box .footer-logo {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.social {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.social .bx {
+    font-size: 24px;
+}
+.social .bx:hover {
+    color: var(--main-color);
+    transition: 0.3s all linear;
+}
+.copyright {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--text-color);
+}
+.copyright p {
+    font-size: 0.82rem;
+}
+.payments .bx {
+    font-size: 25px;
+}
+/* prices */
+.prices {
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(
+        rgb(23,27,68,87%) 100%, 
+        rgb(23,27,68,87%)100%
+        ), url(//images/prices-home.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+}
+.prices-text {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.prices-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.prices-title {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.prices-description {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+.prices-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 2rem;
+    margin-top: 2rem !important;
+}
+.price-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--container-color);
+    border-radius: 0.4rem;
+    margin-bottom: 5rem;
+}
+.price-item:hover {
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+.price-box-img {
+    display: block;
+    width: 100px;
+    position: relative;
+    margin-top: -64px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-top {
+    margin: 1rem;
+}
+.price-item-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.card-top p {
+    font-size: 0.95rem;
+    color: #d4d4d4;
+}
+.price-heaing {
+    width: 100%;
+    padding: 8px 0;
+    background: var(--main-color);
+}
+.price-heaing h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.price-heaing span {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+.ram-title {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 0.7rem 0 1rem;
+    font-weight: 600;
+}
+.ram-title span {
+    font-size: 1.0125rem;
+    color: #d4d4d4;
+    font-weight: 500;
+}
+.plan-btn {
+    padding: 8px 24px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: 500;
+    background: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+.plan-btn:hover {
+    background: var(--hover-color);
+    transition: 0.4s all linear;
+}
+/* responsive */
+@media(max-width:1050px) {
+    .container {
+        margin: 0 auto;
+        width: 92%;
+    }
+}
+@media(max-width:952px) {
+    .nav {
+        padding: 14px 0;
+    }
+    section {
+        padding: 3rem 0 2rem;
+    }
+    .home-slide {
+        min-height: 560px;
+    }
+    .games-content {
+        grid-template-columns: repeat(auto-fit,minmax(260px,auto));
+    }
+    .game-box-img {
+        height: 160px;
+    }
+}
+@media(max-width:850px) {
+    .prices-container {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 1.5rem;
+    }
+    .prices-title {
+        font-size: 2.8rem;
+    }
+}
+@media(max-width:792px) {
+    .navbar {
+        position: fixed; 
+        top: 0;
+        right: -100%; 
+        width: 300px;
+        height: 100vh;
+        background: var(--container-color);
+        flex-direction: column;
+        padding: 25px;
+        transition: 0.5s; 
+        z-index: 100; 
+    }
+    .navbar.open-menu {
+        right: 0; 
+    }
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-link {
+        margin: 1rem 0;
+    }
+}
+@media (max-width: 750px) {
+    .home-slide {
+        min-height: 500px;
+    }
+    p {
+        font-size: 0.875rem;
+    }
+    .slide-title {
+        font-size: 1.7rem;
+    }
+    .slide-description, 
+    .ser-box p, 
+    .control-text p, 
+    .faq-text p {
+        font-size: 0.875rem;
+    }
+    .heading, 
+    .accordion-text h2, 
+    .control-title {
+        font-size: 1.5rem;
+    }
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .prices-text {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+}
+@media (max-width: 640px) {
+    .faq-accordion {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+    .accordion-text {
+        flex: 1 1 10rem;
+    }
+}
+@media (max-width: 540px) {
+    .prices-container {
+        grid-template-columns: 1fr;
+    }
+    .accordion-title {
+        font-size: 0.92rem;
+    }
+    .prices-title {
+        font-size: 2rem;
+    }
+    .prices-description {
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 440px) {
+    .home-slide {
+        min-height: 454px;
+    }
+    .games {
+        width: 90%;
+    }
+    .game-box-img {
+        height: 190px;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+    }
+    .copyright {
+        padding: 20px 0;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+}
+@media (max-width: 392px) {
+    .navbar {
+        width: 280px;
+    }
+    .services-content, 
+    .games-content {
+        grid-template-columns: 1fr;
+    }
+    .footer-title {
+        font-size: 1.074rem;
+    }
+    .prices-subtitle {
+        font-size: 0.9rem;
+    }
+    .prices-title {
+        font-size: 1.6rem;
+    }
+    .price-box-img {
+        width: 90px;
+    }
+}
+@media (max-width: 316px) {
+    .navbar {
+        width: 100%;
+    }
 }
